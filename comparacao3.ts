@@ -1,4 +1,4 @@
-//Teste de comparação dos algoritmos Odd-Even Sort, CycleSort, ShellSort e QuickSort todos com ordem ordenada de dados.
+export
 
 function oddEvenSort(arr: number[]): void {
   let sorted = false;
@@ -99,12 +99,22 @@ function measureTime(fn: (arr: number[]) => void, arr: number[]): number {
   return end - start;
 }
 
-// Teste com array já ordenado
+// Gera array aleatório
+function generateRandomArray(n: number): number[] {
+  const arr = Array.from({ length: n }, (_, i) => i);
+  for (let i = n - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+}
+
+// Teste com array aleatório
 const n = 1000;
-const sortedArray = Array.from({ length: n }, (_, i) => i);
+const randomArray = generateRandomArray(n);
 
 // Medir tempos
-console.log("Tempo Odd-Even Sort:", measureTime(oddEvenSort, sortedArray), "ms");
-console.log("Tempo Cycle Sort:", measureTime(cycleSort, sortedArray), "ms");
-console.log("Tempo Shell Sort:", measureTime(shellSort, sortedArray), "ms");
-console.log("Tempo Quick Sort:", measureTime(quickSort, sortedArray), "ms");
+console.log("Tempo Odd-Even Sort:", measureTime(oddEvenSort, randomArray), "ms");
+console.log("Tempo Cycle Sort:", measureTime(cycleSort, randomArray), "ms");
+console.log("Tempo Shell Sort:", measureTime(shellSort, randomArray), "ms");
+console.log("Tempo Quick Sort:", measureTime(quickSort, randomArray), "ms");
