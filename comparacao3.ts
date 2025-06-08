@@ -1,5 +1,6 @@
-export
+//Teste de comparação dos algoritmos Odd-Even Sort, CycleSort, ShellSort e QuickSort todos com uma ordem aleatória de dados
 
+export
 function oddEvenSort(arr: number[]): void {
   let sorted = false;
   const n = arr.length;
@@ -110,7 +111,7 @@ function generateRandomArray(n: number): number[] {
 }
 
 // Teste com array aleatório
-const n = 1000;
+const n = 100;
 const randomArray = generateRandomArray(n);
 
 // Medir tempos

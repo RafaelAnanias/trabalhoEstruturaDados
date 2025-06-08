@@ -100,7 +100,7 @@ function measureTime(fn: (arr: number[]) => void, arr: number[]): number {
 }
 
 // Teste com array já ordenado
-const n = 1000;
+const n = 100 ;
 const sortedArray = Array.from({ length: n }, (_, i) => i);
 
 // Medir tempos

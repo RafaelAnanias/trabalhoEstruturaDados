@@ -1,6 +1,5 @@
-export
 //Teste de comparação dos algoritmos Odd-Even Sort, CycleSort, ShellSort e QuickSort todos com com array inversamente ordenado
-
+export
 function oddEvenSort(arr: number[]): void {
   let sorted = false;
   const n = arr.length;
@@ -101,7 +100,7 @@ function measureTime(fn: (arr: number[]) => void, arr: number[]): number {
 }
 
 // Teste com array inversamente ordenado
-const n = 1000;
+const n = 100;
 const reverseSortedArray = Array.from({ length: n }, (_, i) => n - i - 1);
 
 // Medir tempos
