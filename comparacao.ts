@@ -1,3 +1,4 @@
+export
 //Teste de comparação dos algoritmos Odd-Even Sort, CycleSort, ShellSort e QuickSort todos com ordem ordenada de dados.
 
 function oddEvenSort(arr: number[]): void {
